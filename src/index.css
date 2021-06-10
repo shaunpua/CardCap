@@ -1,5 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+:root {
+  --primary1: #2145c5;
+  --primary2: rgb(24, 24, 24);
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
+}
+/* Navbar */
+
+.nav {
+  height: 70px;
+  width: 100%;
+  border-bottom: 0.25px solid rgb(204, 204, 204);
+  display: flex;
+}
+
+.nav__left {
+  flex: 50%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__right {
+  flex: 50%;
+  margin-left: 25px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__logo {
+  margin-left: 15px;
+  height: 40px;
+  width: auto;
+}
+
+.nav__title {
+  margin-left: 5px;
+  color: var(--primary1);
+  font-weight: 800;
+}
+
+.nav__links {
+  display: flex;
+}
+
+#hidden {
+  display: flex;
+}
+
+.nav__links a {
+  font-size: 17px;
+  margin-left: 25px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.nav__links a:hover {
+  color: var(--primary1);
+}
+.search {
+  margin-right: 20px;
+  width: 450px;
+  height: 40px;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.search__icon {
+  margin-left: 10px;
+  color: rgb(110, 110, 110);
+}
+
+.search__input {
+  font-size: 16px;
+  width: 400px;
+  height: 30px;
+  border: none;
+
+  background-color: rgb(238, 238, 238);
+  padding-left: 10px;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.nav__menu {
+  display: none;
+}
+
+.nav__search {
+  display: none;
+}
+
+.icon__nav {
+  color: #303030;
+}
+.icon__nav:hover {
+  color: var(--primary1);
+}
+
+/*
+.nav__signup {
+  margin-left: 30px;
+  padding: 8px 14px;
+  background-color: var(--primary1);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+*/
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {
+  .nav__menu {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    display: block;
+    align-self: flex-end;
+    height: 50px;
+    width: auto;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  #hidden {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    background-color: var(--primary1);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  #hidden a {
+    margin-right: 25px;
+    color: rgb(230, 230, 230);
+  }
+
+  #hidden a:hover {
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav__search {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    display: block;
+    align-self: flex-end;
+    height: 50px;
+    width: auto;
+  }
+
+  .search {
+    display: none;
+  }
 }
