@@ -91,10 +91,13 @@ a:hover {
   display: flex;
   align-items: center;
   border-radius: 4px;
+  position: relative;
 }
 
 .search__icon {
-  margin-left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   color: rgb(110, 110, 110);
 }
 
@@ -105,11 +108,15 @@ a:hover {
   border: none;
 
   background-color: rgb(238, 238, 238);
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .search__input:focus {
   outline: none;
+}
+
+.search__input:focus + .search__icon {
+  color: #2145c5;
 }
 
 .nav__menu {
